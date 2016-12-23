@@ -1,0 +1,140 @@
+/* CSS reset begins */
+*{ padding:0px;
+margin:0px;
+font-family: sans-serif;
+box-sizing: border-box;
+}
+/*CSS reset ends*/
+
+/*General classes starts*/
+
+.fleft{float: left;}
+.fright{float: right;}
+.bold{font-weight: 800}
+.clearfix::after{content:'';
+display:block;
+clear:both;
+}
+/*General classes sends*/
+
+/*body class starts  */
+
+
+body{
+	
+    font-size: 14px;
+	color: white;
+	font-weight: 400;
+}
+/*body class ends  */
+
+/*flexbox class starts*/
+.flexbox{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    min-width: 1280px;
+    min-height: 680px;
+     background:url(../images/bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/*flexbox class ends*/
+
+/*content class starts*/
+.content{
+    
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+    
+}
+/*content class ends*/
+
+/*header class starts*/
+.header{
+    
+    padding:10px;
+    align-self: flex-start;
+    margin-left: 10px;
+}
+.header__title{
+    font-size:45px;
+    font-family: monospace;
+}
+
+/*header class ends*/
+
+/*section class starts*/
+.section
+{
+    margin-left: 300px;
+}
+.section__form__userid,.section__form__password
+{
+    display: block;
+    margin: 20px 0px;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 100;
+    padding-left: 5px;
+   border:3px solid #db3030;
+    border-radius: 5px; 
+    
+    
+}
+.section__form__password
+{
+    margin-bottom: 0px;
+}
+input::-webkit-input-placeholder
+{
+    font-size: 14px;
+}
+input:focus
+{
+   outline-style:none;
+
+}
+.section__login__button
+{
+    display: block;
+    background-color: #9b3638;
+    width:300px;
+    height:40px;
+    font-size:20px;
+    text-align: center;
+    color:#efefef;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 10px;
+   margin-top: 20px;
+        
+}
+
+
+.section__login__alert{
+    display:none;
+    width: 300px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 5px;
+ 
+}
+.section__text
+{
+    width:300px;
+    text-align: center;
+    height: 40px;
+    font-size: 18px;
+    padding: 5px;
+    color:white;
+    margin-top: 20px;
+}
+/*section class ends*/
