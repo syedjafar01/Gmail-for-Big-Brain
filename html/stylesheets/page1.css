@@ -1,0 +1,220 @@
+/* CSS reset begins */
+*{ padding:0px;
+margin:0px;
+font-family: sans-serif;
+box-sizing: border-box;
+}
+/*CSS reset ends*/
+
+/*General classes starts*/
+
+.fleft{float: left;}
+.fright{float: right;}
+.bold{font-weight: 800}
+.clearfix::after{content:'';
+display:block;
+clear:both;
+}
+/*General classes sends*/
+
+/*body class starts  */
+
+html{  height: 100%;
+    width: 100%;
+    
+}
+body{
+	
+    font-size: 14px;
+	color: white;
+	font-weight: 400;
+    height: 100%;
+    width: 100%;
+}
+/*body class ends  */
+
+/*flexbox class starts*/
+.layout__container{
+ 
+    height: 100%;
+    width: 100%;
+    background:url(../images/bg.png);
+    background-size: 100% 100%;
+}
+
+/*flexbox class ends*/
+
+/*header class starts*/
+.header{
+    
+   position: absolute;
+    left:2%;
+    top:3%;
+   
+}
+.header__title{
+    display:block;
+    font-size:4vw;
+    font-family: monospace;
+}
+
+/*header class ends*/
+
+/*section class starts*/
+.section
+{
+    position: absolute;
+    right:21%;
+    top:30%;
+    color: white;
+    width:300px;
+    height:200px;
+}
+.section__form__username,.section__form__password
+{
+    display: block;
+    height: 50px;
+    
+    width: 300px;
+    position: relative;
+    
+    
+}
+.section__form__username__value,.section__form__password__value
+{
+    display: block;
+    height: 50px;
+    width: 300px;
+    font-weight: 100;
+    padding-left: 5px;
+    padding-top: 24px;
+    position: relative;
+    z-index: 99;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid  rgba(255,255,255,0.3); 
+ 
+      
+}
+.section__form__username__placeholder,.section__form__password__placeholder{
+position: absolute;
+    top:26px; 
+    
+}
+.section__form__username__value:focus + .section__form__username__placeholder,.section__form__password__value:focus + .section__form__password__placeholder
+{
+    position: absolute;
+    top:5px;
+    transition: all ease 0.5s;
+    transform: scale(0.75,0.75);
+   margin-left: -12px;
+    
+      
+}
+.section__form__username__value:not(:focus) + .section__form__username__placeholder,.section__form__password__value:not(:focus) + .section__form__password__placeholder
+{
+      transition: all ease 0.5s;  
+}
+
+
+input:focus
+{
+   outline-style:none;
+
+}
+.section__form__password
+{
+    margin-bottom: 0px;
+}
+
+.section__submit__button
+{
+    display: block;
+    background-color: #9b3638;
+    width:300px;
+    height:40px;
+    font-size:20px;
+    text-align: center;
+    color:#efefef;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 10px;
+    position: absolute;
+    top:140px;  
+    border: none;
+    cursor: pointer;
+        
+}
+
+
+.section__login__alert{
+    display:block;
+    width: 300px;
+/*    text-align: center;*/
+    font-size: 12px;
+    color:#d03b3b;
+    margin-top: 11px;
+    
+ 
+}
+.section__form__username__placeholder,.section__form__password__placeholder{
+   
+    font-size:14px;
+   
+}
+.form__password--icon,.form__username--icon{
+    display: block;
+    height:15px;
+    width: 15px; 
+    float:left;
+    
+}
+.form__alert--icon{
+    display:inline-block;
+    height:12px;
+    width: 12px; 
+/*    float:left;*/
+    
+}
+.section__form__username__placeholder__text,.section__form__password__placeholder__text{
+    
+    margin-left:5px;
+}
+.section__login__alert__text
+{
+    display: inline-block;
+    margin-left:5px;
+    
+}
+.section__form__bottomline
+{
+    display:block;
+    position: absolute;
+    left: 100px;
+    top:49px;
+    width: 102px;
+    border:none;
+    
+     transform: scale(0,1);
+     transition: all ease 0.2s;
+    border-bottom:1px solid rgba(255,255,255,1);
+  z-index: 99;
+       
+}
+.section__form__username__value:focus ~ .section__form__bottomline,.section__form__password__value:focus ~ .section__form__bottomline
+{
+
+    transform: scale(3,1);
+    transform-origin: center;
+   
+
+      
+}
+
+.section__login__alert.flaticon-alert-icon:before{
+    font-size: 12px;
+    margin-left: 14px;
+}
+.section__form__password__placeholder.flaticon-password-icon:before { font-size: 14px;  margin-left: 13px;}
+.section__form__username__placeholder.flaticon-user-icon:before{font-size: 14px; margin-left: 13px;}
