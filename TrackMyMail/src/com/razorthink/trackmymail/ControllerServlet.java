@@ -45,6 +45,19 @@ public class ControllerServlet extends HttpServlet {
 			rd=request.getRequestDispatcher("afterGettingAuthCode");
 			rd.forward(request, response);
 		}
+		if(request.getRequestURI().contains("afterGettingTokens.do"))
+		{
+			System.out.println("success");
+		}
+		if(request.getRequestURI().contains("gotToken.do"))
+		{
+			/*System.out.println("Inside gotToken.do controller");
+			String accessToken=(String) request.getAttribute("accessToken");
+			response.sendRedirect("https://www.googleapis.com/oauth2/v1/userinfo?access_token="+accessToken);
+			*/
+			rd=request.getRequestDispatcher("validateToken");
+			rd.forward(request, response);
+		}
 		
 	}
 

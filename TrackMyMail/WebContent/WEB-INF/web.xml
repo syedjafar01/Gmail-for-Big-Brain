@@ -44,4 +44,24 @@
     <servlet-name>AfterAuthenticationServlet</servlet-name>
     <url-pattern>/afterGettingAuthCode</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AfterGettingTokenServlet</display-name>
+    <servlet-name>AfterGettingTokenServlet</servlet-name>
+    <servlet-class>com.razorthink.trackmymail.AfterGettingTokenServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AfterGettingTokenServlet</servlet-name>
+    <url-pattern>/success</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ValidateTokenServlet</display-name>
+    <servlet-name>ValidateTokenServlet</servlet-name>
+    <servlet-class>com.razorthink.trackmymail.ValidateTokenServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ValidateTokenServlet</servlet-name>
+    <url-pattern>/ValidateTokenServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

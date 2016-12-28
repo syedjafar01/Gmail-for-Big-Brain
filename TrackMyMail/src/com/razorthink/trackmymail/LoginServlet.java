@@ -73,12 +73,13 @@ public class LoginServlet extends HttpServlet {
 		{
 			e.printStackTrace();
 		}*/
+		System.out.println("Inside LoginServlet");
 		String userid=request.getParameter("userid");
 		String password=request.getParameter("password");
 		HttpSession session=request.getSession(false);
 		System.out.println("Session "+session+" created for the user: "+userid);
 		session.setAttribute("userid", userid);
-		response.sendRedirect("https://accounts.google.com/o/oauth2/auth?redirect_uri=http%3A%2F%2Flocalhost%3A8080%2FTrackMyMail%2FafterGettingAuthCode.do&response_type=code&client_id=929742997040-rbs5bbha3dqcp52klqtd8h1257q86i06.apps.googleusercontent.com&scope=https%3A%2F%2Fmail.google.com%2F&approval_prompt=force");
+		response.sendRedirect("https://accounts.google.com/o/oauth2/auth?redirect_uri=http%3A%2F%2Flocalhost%3A8080%2FTrackMyMail%2FafterGettingAuthCode.do&response_type=code&client_id=929742997040-rbs5bbha3dqcp52klqtd8h1257q86i06.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.readonly&approval_prompt=force");
 		System.out.println("doPostEnded");
 	}
 
