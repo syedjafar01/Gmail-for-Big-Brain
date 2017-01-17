@@ -51,7 +51,9 @@ body {
     background: url(../images/bg.png);
     background-size: 100% 100%;
 }
-
+.black-background{
+	background: #2e2e32;
+}
 
 /*body class ends  */
 
